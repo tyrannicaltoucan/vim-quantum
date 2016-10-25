@@ -1,5 +1,5 @@
 # Quantum
-A Vim color scheme inspired by the [Material Design palette](https://material.google.com/style/color.html#color-color-palette).
+A Vim color scheme based on the [material design palette](https://material.google.com/style/color.html#color-color-palette).
 
 ##### Quantum
 ![quantum](http://i.imgur.com/Evhtd56.png)
@@ -40,14 +40,13 @@ To enable the darker background setting:
 let g:quantum_black = 1
 ```
 
-To enable italics:
+If your terminal supports italics, add:
 ```vim
 let g:quantum_italics = 1
 ```
-> *Italics are not supported on all terminals!*
 
 ### TODO: Features & Improvments
-- [ ] Terminal themes (iTerm, Xresources, Terminal.app)
+- [x] Terminal themes (iTerm, Xresources, Terminal.app)
 - [ ] Improve language specific highlighting
 - [ ] Support for various plugins
 
