@@ -7,7 +7,7 @@ function! airline#themes#quantum#refresh()
 
     let s:N1 = airline#themes#get_highlight2(['Normal', 'bg'], ['Directory', 'fg'], 'none')
     let s:N2 = airline#themes#get_highlight('Pmenu')
-    let s:N3 = airline#themes#get_highlight2(['NonText', 'fg'], ['CursorLine', 'bg'], 'none')
+    let s:N3 = airline#themes#get_highlight('FoldColumn')
     let g:airline#themes#quantum#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
     let group = airline#themes#get_highlight('Type')
@@ -15,7 +15,7 @@ function! airline#themes#quantum#refresh()
             \ 'airline_c': [ group[0], '', group[2], '', '' ]
             \ }
 
-    let s:I1 = airline#themes#get_highlight2(['Normal', 'bg'], ['String', 'fg'], 'none')
+    let s:I1 = airline#themes#get_highlight2(['Normal', 'bg'], ['MoreMsg', 'fg'], 'none')
     let g:airline#themes#quantum#palette.insert = airline#themes#generate_color_map(s:I1, s:N2, s:N3)
     let g:airline#themes#quantum#palette.insert_modified = g:airline#themes#quantum#palette.normal_modified
 
@@ -29,7 +29,7 @@ function! airline#themes#quantum#refresh()
 
     let s:IA = airline#themes#get_highlight2(['NonText', 'fg'], ['CursorLine', 'bg'])
     let g:airline#themes#quantum#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
-    let g:airline#themes#quantum#palette.visual_modified = g:airline#themes#quantum#palette.normal_modified
+    let g:airline#themes#quantum#palette.inactive_modified = g:airline#themes#quantum#palette.normal_modified
 
     if !get(g:, 'loaded_ctrlp', 0)
         finish
