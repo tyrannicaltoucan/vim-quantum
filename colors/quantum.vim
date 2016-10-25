@@ -1,7 +1,7 @@
 " Quantum - A Vim color scheme inspired by Material Design
 " Author: Brandon Siders
 " License: MIT
-" Version: 0.1-pre
+" Version: 0.2-pre
 
 highlight clear
 syntax reset
@@ -21,27 +21,25 @@ endif
 if g:quantum_black
     let s:gray1     = ['#212121', 233]
     let s:gray2     = ['#2b2b2b', 235]
-    let s:gray3     = ['#424242', 239]
+    let s:gray3     = ['#444444', 239]
     let s:gray4     = ['#616161', 241]
-    let s:gray5     = ['#b0b0b0', 249]
-    let s:white     = ['#c7c7c7', 251]
+    let s:gray5     = ['#aaaaaa', 249]
 else
     let s:gray1     = ['#263238', 235]
     let s:gray2     = ['#2e3c44', 236]
-    let s:gray3     = ['#465c67', 238]
-    let s:gray4     = ['#738991', 243]
-    let s:gray5     = ['#b0bec5', 249]
-    let s:white     = ['#c7d1d6', 251]
+    let s:gray3     = ['#445864', 238]
+    let s:gray4     = ['#658595', 243]
+    let s:gray5     = ['#b9c7ce', 249]
 endif
 
-let s:red       = ['#e06c88', 204]
-let s:green     = ['#88c180', 114]
-let s:yellow    = ['#dbc375', 221]
-let s:blue      = ['#78aee9', 75]
-let s:purple    = ['#a785d2', 140]
-let s:cyan      = ['#60bdc2', 44]
-let s:orange    = ['#e48f6f', 209]
-let s:navy      = ['#7986cb', 61]
+let s:red       = ['#eb677d', 204]
+let s:green     = ['#9dc879', 114]
+let s:yellow    = ['#f2c36b', 221]
+let s:blue      = ['#77a8ef', 75]
+let s:purple    = ['#b888e2', 140]
+let s:cyan      = ['#58cabc', 44]
+let s:orange    = ['#f78269', 209]
+let s:skyblue   = ['#70d6ff', 61]
 
 function! s:HL(group, fg, bg, attr)
     let l:attr = a:attr
@@ -63,8 +61,8 @@ function! s:HL(group, fg, bg, attr)
 endfun
 
 " Vim Editor
-call s:HL('ColorColumn',                    '',         s:gray3,    '')
-call s:HL('Cursor',                         s:gray2,    s:white,   '')
+call s:HL('ColorColumn',                    '',         s:gray2,    '')
+call s:HL('Cursor',                         s:gray2,    s:gray5,    '')
 call s:HL('CursorColumn',                   '',         s:gray2,    '')
 call s:HL('CursorLine',                     '',         s:gray2,    'none')
 call s:HL('CursorLineNr',                   s:cyan,     s:gray2,    'none')
@@ -78,9 +76,9 @@ call s:HL('FoldColumn',                     s:gray4,    s:gray2,    '')
 call s:HL('Folded',                         s:gray3,    s:gray1,    '')
 call s:HL('IncSearch',                      s:yellow,   '',         '')
 call s:HL('LineNr',                         s:gray3,    '',         '')
-call s:HL('MatchParen',                     s:gray2,    s:cyan,     '')
-call s:HL('ModeMsg',                        s:gray4,    '',         '')
-call s:HL('MoreMsg',                        s:gray4,    '',         '')
+call s:HL('MatchParen',                     s:gray2,    s:cyan,     'bold')
+call s:HL('ModeMsg',                        s:green,    '',         '')
+call s:HL('MoreMsg',                        s:green,    '',         '')
 call s:HL('NonText',                        s:gray4,    '',         'none')
 call s:HL('Normal',                         s:gray5,    s:gray1,    'none')
 call s:HL('Pmenu',                          '',         s:gray3,    '')
@@ -97,7 +95,7 @@ call s:HL('StatusLine',                     s:gray5,    s:gray3,    'none')
 call s:HL('StatusLineNC',                   s:gray2,    s:gray4,    '')
 call s:HL('TabLine',                        s:gray4,    s:gray2,    'none')
 call s:HL('TabLineFill',                    s:gray4,    s:gray2,    'none')
-call s:HL('TabLineSel',                     s:gray5,    s:gray3,    'none')
+call s:HL('TabLineSel',                     s:skyblue,  s:gray3,    'none')
 call s:HL('Title',                          s:green,    '',         'none')
 call s:HL('VertSplit',                      s:gray4,    s:gray1,    'none')
 call s:HL('Visual',                         s:gray5,    s:gray3,    '')
@@ -118,10 +116,11 @@ call s:HL('Include',                        s:blue,     '',         '')
 call s:HL('Define',                         s:purple,   '',         'none')
 call s:HL('Macro',                          s:purple,   '',         '')
 call s:HL('Type',                           s:yellow,   '',         'none')
-call s:HL('Special',                        s:navy,     '',         '')
+call s:HL('Structure',                      s:cyan,     '',         '')
+call s:HL('Special',                        s:skyblue,  '',         '')
 call s:HL('Underlined',                     s:blue,     '',         'none')
 call s:HL('Error',                          s:red,      s:gray1,    'bold')
-call s:HL('Todo',                           s:cyan,     s:gray1,    'bold')
+call s:HL('Todo',                           s:skyblue,  s:gray1,    'bold')
 
 " Vim-Fugitive
 call s:HL('diffAdded',                      s:green,    '',         '')
