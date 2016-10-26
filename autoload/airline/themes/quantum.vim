@@ -2,8 +2,8 @@ let g:airline#themes#quantum#palette = {}
 
 function! airline#themes#quantum#refresh()
     let g:airline#themes#quantum#palette.accents = {
-            \ 'red': airline#themes#get_highlight('Error'),
-            \ }
+                \ 'red': airline#themes#get_highlight('Error'),
+                \ }
 
     let s:N1 = airline#themes#get_highlight2(['Normal', 'bg'], ['Directory', 'fg'], 'none')
     let s:N2 = airline#themes#get_highlight('Pmenu')
@@ -12,8 +12,8 @@ function! airline#themes#quantum#refresh()
 
     let group = airline#themes#get_highlight('Type')
     let g:airline#themes#quantum#palette.normal_modified = {
-            \ 'airline_c': [ group[0], '', group[2], '', '' ]
-            \ }
+                \ 'airline_c': [ group[0], '', group[2], '', '' ]
+                \ }
 
     let s:I1 = airline#themes#get_highlight2(['Normal', 'bg'], ['MoreMsg', 'fg'], 'none')
     let g:airline#themes#quantum#palette.insert = airline#themes#generate_color_map(s:I1, s:N2, s:N3)
@@ -31,13 +31,12 @@ function! airline#themes#quantum#refresh()
     let g:airline#themes#quantum#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
     let g:airline#themes#quantum#palette.inactive_modified = g:airline#themes#quantum#palette.normal_modified
 
-    if !get(g:, 'loaded_ctrlp', 0)
-        finish
+    if get(g:, 'loaded_ctrlp', 0)
+        let g:airline#themes#quantum#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
+                    \ airline#themes#get_highlight('CursorLine'),
+                    \ airline#themes#get_highlight2(['Operator', 'fg'], ['Normal', 'bg']),
+                    \ airline#themes#get_highlight2(['Normal', 'bg'], ['Operator', 'fg']))
     endif
-    let g:airline#themes#quantum#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-            \ airline#themes#get_highlight('CursorLine'),
-            \ airline#themes#get_highlight2(['Operator', 'fg'], ['Normal', 'bg']),
-            \ airline#themes#get_highlight2(['Normal', 'bg'], ['Operator', 'fg']))
 endfun
 
 call airline#themes#quantum#refresh()
