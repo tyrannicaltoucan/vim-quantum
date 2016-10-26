@@ -2,10 +2,10 @@
 A Vim color scheme based on the [material design palette](https://material.google.com/style/color.html#color-color-palette).
 
 ##### Quantum
-![quantum](http://i.imgur.com/Evhtd56.png)
+![quantum](http://i.imgur.com/JNN1JCQ.png)
 
 ##### Quantum Black
-![quantum-black](http://i.imgur.com/1pHny1U.png)
+![quantum-black](http://i.imgur.com/8cmsWtm.png)
 
 ### Installation
 Install manually by downloading this theme to `~/.vim/colors` or use a plugin manager.
