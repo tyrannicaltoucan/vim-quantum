@@ -1,11 +1,11 @@
 # Quantum
-A Vim color scheme based on the [material design palette](https://material.google.com/style/color.html#color-color-palette).
+A Vim color scheme based on the [Material Design palette](https://material.google.com/style/color.html#color-color-palette).
 
 ##### Quantum
-![quantum](http://i.imgur.com/JNN1JCQ.png)
+![quantum](http://i.imgur.com/9PV97Hx.png)
 
 ##### Quantum Black
-![quantum-black](http://i.imgur.com/8cmsWtm.png)
+![quantum-black](http://i.imgur.com/yk961KH.png)
 
 ### Installation
 Install manually by downloading this theme to `~/.vim/colors` or use a plugin manager.
@@ -49,6 +49,7 @@ let g:quantum_italics = 1
 - [x] Terminal themes (iTerm, Xresources, Terminal.app)
 - [ ] Improve language specific highlighting
 - [ ] Support for various plugins
+- [ ] Dark cursorline option
 
 ---
 Copyright © 2016 Brandon Siders. Released under the MIT License.
