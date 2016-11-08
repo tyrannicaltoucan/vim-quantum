@@ -1,7 +1,7 @@
 " Quantum - A Vim color scheme inspired by Material Design
 " Author: Brandon Siders
 " License: MIT
-" Version: 0.3-pre
+" Version: 0.4-pre
 
 highlight clear
 syntax reset
@@ -119,6 +119,105 @@ call s:HL('Underlined',                     s:blue,     '',         'none')
 call s:HL('Error',                          s:red,      s:gray1,    'bold')
 call s:HL('Todo',                           s:orange,   s:gray1,    'bold')
 
+" CSS
+call s:HL('cssAttrComma',                   s:purple,   '',         '')
+call s:HL('cssAttributeSelector',           s:green,    '',         '')
+call s:HL('cssBraces',                      s:gray5,    '',         '')
+call s:HL('cssClassName',                   s:yellow,   '',         '')
+call s:HL('cssClassNameDot',                s:yellow,   '',         '')
+call s:HL('cssFontDescriptor',              s:purple,   '',         '')
+call s:HL('cssFunctionName',                s:blue,     '',         '')
+call s:HL('cssIdentifier',                  s:blue,     '',         '')
+call s:HL('cssMediaType',                   s:orange,   '',         '')
+call s:HL('cssProp',                        s:gray5,    '',         '')
+call s:HL('cssSelectorOp',                  s:navy,     '',         '')
+call s:HL('cssSelectorOp2',                 s:navy,     '',         '')
+
+" Git Commit
+call s:HL('gitcommitBranch',                s:blue,     '',         '')
+call s:HL('gitcommitUnmerged',              s:green,    '',         '')
+call s:HL('gitcommitUntrackedFile',         s:cyan,     '',         '')
+call s:HL('gitcommitSelectedFile',          s:green,    '',         '')
+call s:HL('gitcommitDiscardedFile',         s:red,      '',         '')
+call s:HL('gitcommitUnmergedFile',          s:yellow,   '',         '')
+call s:HL('gitcommitSelectedType',          s:green,    '',         '')
+call s:HL('gitcommitDiscardedType',         s:red,      '',         '')
+hi link gitcommitNoBranch       gitcommitBranch
+hi link gitcommitUntracked      gitcommitComment
+hi link gitcommitDiscarded      gitcommitComment
+hi link gitcommitSelected       gitcommitComment
+hi link gitcommitDiscardedArrow gitcommitDiscardedFile
+hi link gitcommitSelectedArrow  gitcommitSelectedFile
+hi link gitcommitUnmergedArrow  gitcommitUnmergedFile
+
+" HTML
+call s:HL('htmlEndTag',                     s:blue,     '',         '')
+call s:HL('htmlLink',                       s:red,      '',         '')
+call s:HL('htmlTag',                        s:blue,     '',         '')
+call s:HL('htmlTitle',                      s:gray5,    '',         '')
+call s:HL('htmlSpecialTagName',             s:purple,   '',         '')
+
+" Javascript
+call s:HL('javaScriptBraces',               s:gray5,    '',         '')
+call s:HL('javaScriptNull',                 s:orange,   '',         '')
+call s:HL('javaScriptIdentifier',           s:purple,   '',         '')
+call s:HL('javaScriptNumber',               s:orange,   '',         '')
+call s:HL('javaScriptRequire',              s:cyan,     '',         '')
+call s:HL('javaScriptReserved',             s:purple,   '',         '')
+" pangloss/vim-javascript
+call s:HL('jsArrowFunction',                s:purple,   '',         '')
+call s:HL('jsClassKeywords',                s:purple,   '',         '')
+call s:HL('jsDocParam',                     s:green,    '',         '')
+call s:HL('jsDocTags',                      s:cyan,     '',         '')
+call s:HL('jsFuncCall',                     s:blue,     '',         '')
+call s:HL('jsFunction',                     s:purple,   '',         '')
+call s:HL('jsGlobalObjects',                s:yellow,   '',         '')
+call s:HL('jsGlobalNodeObjects',            s:yellow,   '',         '')
+call s:HL('jsNull',                         s:orange,   '',         '')
+call s:HL('jsStorageClass',                 s:purple,   '',         '')
+call s:HL('jsThis',                         s:red,      '',         '')
+call s:HL('jsUndefined',                    s:orange,   '',         '')
+
+" JSON
+call s:HL('jsonCommentError',               s:red,      '',         'reverse')
+call s:HL('jsonMissingCommaError',          s:red,      '',         'reverse')
+call s:HL('jsonNoQuotesError',              s:red,      '',         'reverse')
+call s:HL('jsonNumError',                   s:red,      '',         'reverse')
+call s:HL('jsonStringSQError',              s:red,      '',         'reverse')
+call s:HL('jsonSemicolonError',             s:red,      '',         'reverse')
+
+" Less
+call s:HL('lessAmpersand',                  s:purple,   '',         '')
+call s:HL('lessClassChar',                  s:yellow,   '',         '')
+call s:HL('lessCssAttribute',               s:gray5,    '',         '')
+call s:HL('lessFunction',                   s:blue,     '',         '')
+
+" Markdown
+call s:HL('markdownBold',                   s:orange,   '',         'bold')
+call s:HL('markdownCode',                   s:cyan,     '',         '')
+call s:HL('markdownCodeBlock',              s:cyan,     '',         '')
+call s:HL('markdownCodeDelimiter',          s:cyan,     '',         '')
+call s:HL('markdownHeadingDelimiter',       s:green,    '',         '')
+call s:HL('markdownHeadingRule',            s:gray4,    '',         '')
+call s:HL('markdownId',                     s:purple,   '',         '')
+call s:HL('markdownItalic',                 s:blue,     '',         'italic')
+call s:HL('markdownListMarker',             s:navy,     '',         '')
+call s:HL('markdownOrderedListMarker',      s:navy,     '',         '')
+call s:HL('markdownRule',                   s:gray4,    '',         '')
+call s:HL('markdownUrl',                    s:purple,   '',         '')
+call s:HL('markdownUrlTitleDelimiter',      s:green,    '',         '')
+
+" Ruby
+call s:HL('rubyInterpolation',              s:cyan,     '',         '')
+call s:HL('rubyInterpolationDelimiter',     s:navy,     '',         '')
+call s:HL('rubyRegexp',                     s:cyan,     '',         '')
+call s:HL('rubyRegexpDelimiter',            s:navy,     '',         '')
+call s:HL('rubyStringDelimiter',            s:green,    '',         '')
+
+" Sass
+call s:HL('sassAmpersand',                  s:purple,   '',         '')
+call s:HL('sassClassChar',                  s:yellow,   '',         '')
+
 " Vim-Fugitive
 call s:HL('diffAdded',                      s:green,    '',         '')
 call s:HL('diffRemoved',                    s:red,      '',         '')
@@ -126,10 +225,16 @@ call s:HL('diffRemoved',                    s:red,      '',         '')
 " Vim-Gittgutter
 call s:HL('GitGutterAdd',                   s:green,    '',         '')
 call s:HL('GitGutterChange',                s:yellow,   '',         '')
-call s:HL('GitGutterDelete',                s:red,      '',         '')
 call s:HL('GitGutterChangeDelete',          s:orange,   '',         '')
+call s:HL('GitGutterDelete',                s:red,      '',         '')
 
 " Vim-Signify
 hi link SignifySignAdd GitGutterAdd
 hi link SignifySignChange GitGutterChange
 hi link SignifySignDelete GitGutterDelete
+
+" XML
+call s:HL('xmlAttrib',                      s:yellow,   '',         '')
+call s:HL('xmlEndTag',                      s:blue,     '',         '')
+call s:HL('xmlTag',                         s:blue,     '',         '')
+call s:HL('xmlTagName',                     s:blue,     '',         '')
