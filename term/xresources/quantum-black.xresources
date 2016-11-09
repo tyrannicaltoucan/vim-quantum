@@ -4,38 +4,38 @@
 ! by adding: #include "path/to/this/file"
 
 ! special
-*.foreground:   #aaaaaa
+*.foreground:   #aeb1b7
 *.background:   #212121
-*.cursorColor:  #d0d0d0
+*.cursorColor:  #c8cbce
 
 ! black
-*.color0:       #212121
-*.color8:       #525252
+*.color0:       #3c3e42
+*.color8:       #4f5558
 
 ! red
-*.color1:       #e16881
-*.color9:       #ee8ea2
+*.color1:       #dd6880
+*.color9:       #de889a
 
 ! green
-*.color2:       #84bb6d
-*.color10:      #9fd18a
+*.color2:       #83b879
+*.color10:      #99c490
 
 ! yellow
-*.color3:       #e1be68
-*.color11:      #eed28e
+*.color3:       #dec790
+*.color11:      #e7d09a
 
 ! blue
-*.color4:       #77a8ef
-*.color12:      #9dc4fc
+*.color4:       #95b5e4
+*.color12:      #a0beea
 
 ! purple
-*.color5:       #b888e2
-*.color13:      #d1aaf3
+*.color5:       #c1a3e0
+*.color13:      #cbacea
 
 ! cyan
-*.color6:       #60bdc2
-*.color14:      #7fd2d6
+*.color6:       #64c1d4
+*.color14:      #88d1df
 
 ! white
-*.color7:       #979797
-*.color15:      #b4b4b4
+*.color7:       #9a9da3
+*.color15:      #b4b7bb

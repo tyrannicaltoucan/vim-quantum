@@ -1,7 +1,7 @@
 " Quantum - A Vim color scheme inspired by Material Design
 " Author: Brandon Siders
 " License: MIT
-" Version: 0.4-pre
+" Version: 0.5-pre
 
 highlight clear
 syntax reset
@@ -18,27 +18,27 @@ if !exists('g:quantum_black')
 endif
 
 if g:quantum_black
-    let s:gray1 = ['#212121', 233]
-    let s:gray2 = ['#2b2b2b', 235]
-    let s:gray3 = ['#444444', 239]
-    let s:gray4 = ['#616161', 241]
-    let s:gray5 = ['#aaaaaa', 249]
+    let s:gray1 = ['#212121', 234]
+    let s:gray2 = ['#2b2e30', 236]
+    let s:gray3 = ['#3c3e42', 238]
+    let s:gray4 = ['#6b6f75', 242]
+    let s:gray5 = ['#aeb1b7', 248]
 else
-    let s:gray1 = ['#263238', 235]
-    let s:gray2 = ['#2e3c44', 236]
-    let s:gray3 = ['#445864', 238]
-    let s:gray4 = ['#658595', 243]
-    let s:gray5 = ['#aabbc4', 249]
+    let s:gray1 = ['#263238', 236]
+    let s:gray2 = ['#2f3e46', 238]
+    let s:gray3 = ['#40535f', 240]
+    let s:gray4 = ['#607f8f', 244]
+    let s:gray5 = ['#a8bac7', 250]
 endif
 
-let s:red       = ['#e16881', 204]
-let s:green     = ['#84b97c', 114]
-let s:yellow    = ['#e1be68', 221]
-let s:blue      = ['#77a8ef', 75]
-let s:purple    = ['#b888e2', 140]
-let s:cyan      = ['#5dc4d1', 44]
-let s:orange    = ['#e18268', 209]
-let s:navy      = ['#7685d4', 61]
+let s:red       = ['#dd6880', 204]
+let s:green     = ['#83b879', 114]
+let s:yellow    = ['#ddbd71', 221]
+let s:blue      = ['#76a2e1', 75]
+let s:purple    = ['#b183de', 141]
+let s:cyan      = ['#64c1d4', 44]
+let s:orange    = ['#db855d', 209]
+let s:navy      = ['#6d76d4', 61]
 
 function! s:HL(group, fg, bg, attr)
     let l:attr = a:attr
@@ -80,7 +80,7 @@ call s:HL('ModeMsg',                        s:green,    '',         '')
 call s:HL('MoreMsg',                        s:green,    '',         '')
 call s:HL('NonText',                        s:gray4,    '',         'none')
 call s:HL('Normal',                         s:gray5,    s:gray1,    'none')
-call s:HL('Pmenu',                          '',         s:gray3,    '')
+call s:HL('Pmenu',                          s:gray5,    s:gray3,    '')
 call s:HL('PmenuSbar',                      '',         s:gray2,    '')
 call s:HL('PmenuSel',                       s:gray2,    s:cyan,     '')
 call s:HL('PmenuThumb',                     '',         s:gray4,    '')
