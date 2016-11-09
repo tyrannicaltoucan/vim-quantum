@@ -2,10 +2,10 @@
 A Vim color scheme based on the [Material Design palette](https://material.google.com/style/color.html#color-color-palette).
 
 ##### Quantum
-![quantum](http://i.imgur.com/9PV97Hx.png)
+![quantum](http://i.imgur.com/KwrRhYg.png)
 
 ##### Quantum Black
-![quantum-black](http://i.imgur.com/yk961KH.png)
+![quantum-black](http://i.imgur.com/CyhQnHI.png)
 
 ### Installation
 Use a plugin manager, or download this repo to `~/.vim/colors`.
@@ -35,7 +35,7 @@ To set the included [Airline](https://github.com/vim-airline/vim-airline) theme:
 let g:airline_theme='quantum'
 ```
 
-To use the higher contrast Quantum Black theme:
+For more contrast, enable Quantum Black:
 ```vim
 let g:quantum_black = 1
 ```
@@ -48,7 +48,7 @@ let g:quantum_italics = 1
 ### TODO: Features & Improvments
 - [x] Terminal themes (iTerm, Xresources, Terminal.app)
 - [x] Improve language specific highlighting
-- [ ] Support for various plugins
+- [x] Support for various plugins
 - [ ] Dark cursorline option
 
 ---
