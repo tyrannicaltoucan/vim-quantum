@@ -1,7 +1,7 @@
 " Quantum - A Vim color scheme inspired by Material Design
 " Author: Brandon Siders
 " License: MIT
-" Version: 0.5-pre
+" Version: 0.5
 
 highlight clear
 syntax reset
@@ -88,6 +88,8 @@ call s:HL('Question',                       s:blue,     '',         'none')
 call s:HL('Search',                         s:gray1,    s:yellow,   '')
 call s:HL('SignColumn',                     s:gray5,    s:gray1,    '')
 call s:HL('SpecialKey',                     s:gray4,    '',         '')
+call s:HL('SpellCap',                       s:blue,     s:gray2,    'undercurl')
+call s:HL('SpellBad',                       s:red,      s:gray2,    'undercurl')
 call s:HL('StatusLine',                     s:gray5,    s:gray3,    'none')
 call s:HL('StatusLineNC',                   s:gray2,    s:gray4,    '')
 call s:HL('TabLine',                        s:gray4,    s:gray2,    'none')
