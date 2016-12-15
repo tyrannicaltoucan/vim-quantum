@@ -240,3 +240,25 @@ call s:HL('xmlAttrib',                      s:yellow,   '',         '')
 call s:HL('xmlEndTag',                      s:blue,     '',         '')
 call s:HL('xmlTag',                         s:blue,     '',         '')
 call s:HL('xmlTagName',                     s:blue,     '',         '')
+
+" Neovim terminal colors
+if has('nvim')
+    let g:terminal_color_0 = s:gray1[0]
+    let g:terminal_color_1 = '#dd6880'
+    let g:terminal_color_2 = '#83b879'
+    let g:terminal_color_3 = '#ddb76f'
+    let g:terminal_color_4 = '#7aa5e6'
+    let g:terminal_color_5 = '#ad88e2'
+    let g:terminal_color_6 = '#63c9d6'
+    let g:terminal_color_7 = s:gray5[0]
+    let g:terminal_color_8 = s:gray4[0]
+    let g:terminal_color_9 = '#f1879d'
+    let g:terminal_color_10 = '#89cf7c'
+    let g:terminal_color_11 = '#f1ce8e'
+    let g:terminal_color_12 = '#9dc1f6'
+    let g:terminal_color_13 = '#c8aaf3'
+    let g:terminal_color_14 = '#80e0ec'
+    let g:terminal_color_15 = '#c1cdd3'
+    let g:terminal_color_background = g:terminal_color_0
+    let g:terminal_color_foreground = g:terminal_color_7
+endif
