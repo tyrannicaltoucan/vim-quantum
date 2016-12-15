@@ -1,7 +1,7 @@
 " Quantum - A Vim color scheme inspired by Material Design
 " Author: Brandon Siders
 " License: MIT
-" Version: 0.5
+" Version: 1.0-pre
 
 highlight clear
 syntax reset
@@ -19,26 +19,26 @@ endif
 
 if g:quantum_black
     let s:gray1 = ['#212121', 234]
-    let s:gray2 = ['#2b2e30', 236]
-    let s:gray3 = ['#3c3e42', 238]
-    let s:gray4 = ['#6b6f75', 242]
-    let s:gray5 = ['#aeb1b7', 248]
+    let s:gray2 = ['#272b2c', 236]
+    let s:gray3 = ['#394040', 238]
+    let s:gray4 = ['#5e696a', 242]
+    let s:gray5 = ['#aeb6b7', 248]
 else
     let s:gray1 = ['#263238', 236]
-    let s:gray2 = ['#2f3e46', 238]
-    let s:gray3 = ['#40535f', 240]
-    let s:gray4 = ['#607f8f', 244]
-    let s:gray5 = ['#a8bac7', 250]
+    let s:gray2 = ['#2c3e44', 238]
+    let s:gray3 = ['#415a63', 240]
+    let s:gray4 = ['#608592', 244]
+    let s:gray5 = ['#aabbc3', 250]
 endif
 
 let s:red       = ['#dd6880', 204]
 let s:green     = ['#83b879', 114]
-let s:yellow    = ['#ddbd71', 221]
-let s:blue      = ['#76a2e1', 75]
-let s:purple    = ['#b183de', 141]
-let s:cyan      = ['#64c1d4', 44]
-let s:orange    = ['#db855d', 209]
-let s:navy      = ['#6d76d4', 61]
+let s:yellow    = ['#ddb76f', 221]
+let s:blue      = ['#7aa5e6', 75]
+let s:purple    = ['#ad88e2', 141]
+let s:cyan      = ['#63c9d6', 44]
+let s:orange    = ['#da8c68', 209]
+let s:navy      = ['#6272cb', 61]
 
 function! s:HL(group, fg, bg, attr)
     let l:attr = a:attr
