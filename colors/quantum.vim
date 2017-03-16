@@ -19,26 +19,26 @@ endif
 
 if g:quantum_black
     let s:gray1 = ['#212121', 234]
-    let s:gray2 = ['#272b2c', 236]
-    let s:gray3 = ['#394040', 238]
-    let s:gray4 = ['#5e696a', 242]
-    let s:gray5 = ['#aeb6b7', 248]
+    let s:gray2 = ['#292929', 236]
+    let s:gray3 = ['#474646', 238]
+    let s:gray4 = ['#6a6c6c', 242]
+    let s:gray5 = ['#bcbec0', 248]
 else
     let s:gray1 = ['#263238', 236]
-    let s:gray2 = ['#2c3e44', 238]
-    let s:gray3 = ['#415a63', 240]
-    let s:gray4 = ['#608592', 244]
-    let s:gray5 = ['#aabbc3', 250]
+    let s:gray2 = ['#2c3a41', 238]
+    let s:gray3 = ['#425762', 240]
+    let s:gray4 = ['#658494', 244]
+    let s:gray5 = ['#aebbc5', 250]
 endif
 
-let s:red       = ['#dd6880', 204]
-let s:green     = ['#83b879', 114]
-let s:yellow    = ['#ddb76f', 221]
-let s:blue      = ['#7aa5e6', 75]
-let s:purple    = ['#ad88e2', 141]
-let s:cyan      = ['#63c9d6', 44]
-let s:orange    = ['#da8c68', 209]
-let s:navy      = ['#6272cb', 61]
+let s:red       = ['#dd7186', 204]
+let s:green     = ['#87bb7c', 114]
+let s:yellow    = ['#d5b875', 221]
+let s:blue      = ['#70ace5', 75]
+let s:purple    = ['#a48add', 141]
+let s:cyan      = ['#69c5ce', 44]
+let s:orange    = ['#d7956e', 209]
+let s:indigo    = ['#7681de', 61]
 
 function! s:HL(group, fg, bg, attr)
     let l:attr = a:attr
@@ -116,7 +116,7 @@ call s:HL('Define',                         s:purple,   '',         'none')
 call s:HL('Macro',                          s:purple,   '',         '')
 call s:HL('Type',                           s:yellow,   '',         'none')
 call s:HL('Structure',                      s:cyan,     '',         '')
-call s:HL('Special',                        s:navy,     '',         '')
+call s:HL('Special',                        s:indigo,   '',         '')
 call s:HL('Underlined',                     s:blue,     '',         'none')
 call s:HL('Error',                          s:red,      s:gray1,    'bold')
 call s:HL('Todo',                           s:orange,   s:gray1,    'bold')
@@ -132,8 +132,8 @@ call s:HL('cssFunctionName',                s:blue,     '',         '')
 call s:HL('cssIdentifier',                  s:blue,     '',         '')
 call s:HL('cssMediaType',                   s:orange,   '',         '')
 call s:HL('cssProp',                        s:gray5,    '',         '')
-call s:HL('cssSelectorOp',                  s:navy,     '',         '')
-call s:HL('cssSelectorOp2',                 s:navy,     '',         '')
+call s:HL('cssSelectorOp',                  s:indigo,   '',         '')
+call s:HL('cssSelectorOp2',                 s:indigo,   '',         '')
 
 " Git Commit
 call s:HL('gitcommitBranch',                s:blue,     '',         '')
@@ -203,17 +203,17 @@ call s:HL('markdownHeadingDelimiter',       s:green,    '',         '')
 call s:HL('markdownHeadingRule',            s:gray4,    '',         '')
 call s:HL('markdownId',                     s:purple,   '',         '')
 call s:HL('markdownItalic',                 s:blue,     '',         'italic')
-call s:HL('markdownListMarker',             s:navy,     '',         '')
-call s:HL('markdownOrderedListMarker',      s:navy,     '',         '')
+call s:HL('markdownListMarker',             s:indigo,   '',         '')
+call s:HL('markdownOrderedListMarker',      s:indigo,   '',         '')
 call s:HL('markdownRule',                   s:gray4,    '',         '')
 call s:HL('markdownUrl',                    s:purple,   '',         '')
 call s:HL('markdownUrlTitleDelimiter',      s:green,    '',         '')
 
 " Ruby
 call s:HL('rubyInterpolation',              s:cyan,     '',         '')
-call s:HL('rubyInterpolationDelimiter',     s:navy,     '',         '')
+call s:HL('rubyInterpolationDelimiter',     s:indigo,   '',         '')
 call s:HL('rubyRegexp',                     s:cyan,     '',         '')
-call s:HL('rubyRegexpDelimiter',            s:navy,     '',         '')
+call s:HL('rubyRegexpDelimiter',            s:indigo,   '',         '')
 call s:HL('rubyStringDelimiter',            s:green,    '',         '')
 
 " Sass
@@ -244,21 +244,21 @@ call s:HL('xmlTagName',                     s:blue,     '',         '')
 " Neovim terminal colors
 if has('nvim')
     let g:terminal_color_0 = s:gray1[0]
-    let g:terminal_color_1 = '#dd6880'
-    let g:terminal_color_2 = '#83b879'
-    let g:terminal_color_3 = '#ddb76f'
-    let g:terminal_color_4 = '#7aa5e6'
-    let g:terminal_color_5 = '#ad88e2'
-    let g:terminal_color_6 = '#63c9d6'
+    let g:terminal_color_1 = s:red[0]
+    let g:terminal_color_2 = s:green[0]
+    let g:terminal_color_3 = s:yellow[0]
+    let g:terminal_color_4 = s:blue[0]
+    let g:terminal_color_5 = s:purple[0]
+    let g:terminal_color_6 = s:cyan[0]
     let g:terminal_color_7 = s:gray5[0]
-    let g:terminal_color_8 = s:gray4[0]
-    let g:terminal_color_9 = '#f1879d'
-    let g:terminal_color_10 = '#89cf7c'
-    let g:terminal_color_11 = '#f1ce8e'
-    let g:terminal_color_12 = '#9dc1f6'
-    let g:terminal_color_13 = '#c8aaf3'
-    let g:terminal_color_14 = '#80e0ec'
-    let g:terminal_color_15 = '#c1cdd3'
+    let g:terminal_color_8 = s:gray3[0]
+    let g:terminal_color_9 = s:red[0]
+    let g:terminal_color_10 = s:green[0]
+    let g:terminal_color_11 = s:yellow[0]
+    let g:terminal_color_12 = s:blue[0]
+    let g:terminal_color_13 = s:purple[0]
+    let g:terminal_color_14 = s:cyan[0]
+    let g:terminal_color_15 = s:gray4[0]
     let g:terminal_color_background = g:terminal_color_0
     let g:terminal_color_foreground = g:terminal_color_7
 endif
