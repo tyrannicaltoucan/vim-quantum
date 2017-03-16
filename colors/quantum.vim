@@ -1,7 +1,6 @@
 " Quantum - A Vim color scheme inspired by Material Design
 " Author: Brandon Siders
 " License: MIT
-" Version: 1.0-pre
 
 highlight clear
 syntax reset
@@ -18,27 +17,27 @@ if !exists('g:quantum_black')
 endif
 
 if g:quantum_black
-    let s:gray1 = ['#212121', 234]
-    let s:gray2 = ['#292929', 236]
-    let s:gray3 = ['#474646', 238]
-    let s:gray4 = ['#6a6c6c', 242]
-    let s:gray5 = ['#bcbec0', 248]
+    let s:gray1 = '#212121'
+    let s:gray2 = '#292929'
+    let s:gray3 = '#474646'
+    let s:gray4 = '#6a6c6c'
+    let s:gray5 = '#bcbec0'
 else
-    let s:gray1 = ['#263238', 236]
-    let s:gray2 = ['#2c3a41', 238]
-    let s:gray3 = ['#425762', 240]
-    let s:gray4 = ['#658494', 244]
-    let s:gray5 = ['#aebbc5', 250]
+    let s:gray1 = '#263238'
+    let s:gray2 = '#2c3a41'
+    let s:gray3 = '#425762'
+    let s:gray4 = '#658494'
+    let s:gray5 = '#aebbc5'
 endif
 
-let s:red       = ['#dd7186', 204]
-let s:green     = ['#87bb7c', 114]
-let s:yellow    = ['#d5b875', 221]
-let s:blue      = ['#70ace5', 75]
-let s:purple    = ['#a48add', 141]
-let s:cyan      = ['#69c5ce', 44]
-let s:orange    = ['#d7956e', 209]
-let s:indigo    = ['#7681de', 61]
+let s:red       = '#dd7186'
+let s:green     = '#87bb7c'
+let s:yellow    = '#d5b875'
+let s:blue      = '#70ace5'
+let s:purple    = '#a48add'
+let s:cyan      = '#69c5ce'
+let s:orange    = '#d7956e'
+let s:indigo    = '#7681de'
 
 function! s:HL(group, fg, bg, attr)
     let l:attr = a:attr
@@ -47,11 +46,11 @@ function! s:HL(group, fg, bg, attr)
     endif
 
     if !empty(a:fg)
-        exec 'hi ' . a:group . ' guifg=' . a:fg[0] . ' ctermfg=' . a:fg[1]
+        exec 'hi ' . a:group . ' guifg=' . a:fg
     endif
 
     if !empty(a:bg)
-        exec 'hi ' . a:group . ' guibg=' . a:bg[0] . ' ctermbg=' . a:bg[1]
+        exec 'hi ' . a:group . ' guibg=' . a:bg
     endif
 
     if l:attr != ''
@@ -243,22 +242,22 @@ call s:HL('xmlTagName',                     s:blue,     '',         '')
 
 " Neovim terminal colors
 if has('nvim')
-    let g:terminal_color_0 = s:gray1[0]
-    let g:terminal_color_1 = s:red[0]
-    let g:terminal_color_2 = s:green[0]
-    let g:terminal_color_3 = s:yellow[0]
-    let g:terminal_color_4 = s:blue[0]
-    let g:terminal_color_5 = s:purple[0]
-    let g:terminal_color_6 = s:cyan[0]
-    let g:terminal_color_7 = s:gray5[0]
-    let g:terminal_color_8 = s:gray3[0]
-    let g:terminal_color_9 = s:red[0]
-    let g:terminal_color_10 = s:green[0]
-    let g:terminal_color_11 = s:yellow[0]
-    let g:terminal_color_12 = s:blue[0]
-    let g:terminal_color_13 = s:purple[0]
-    let g:terminal_color_14 = s:cyan[0]
-    let g:terminal_color_15 = s:gray4[0]
+    let g:terminal_color_0 = s:gray1
+    let g:terminal_color_1 = s:red
+    let g:terminal_color_2 = s:green
+    let g:terminal_color_3 = s:yellow
+    let g:terminal_color_4 = s:blue
+    let g:terminal_color_5 = s:purple
+    let g:terminal_color_6 = s:cyan
+    let g:terminal_color_7 = s:gray5
+    let g:terminal_color_8 = s:gray3
+    let g:terminal_color_9 = s:red
+    let g:terminal_color_10 = s:green
+    let g:terminal_color_11 = s:yellow
+    let g:terminal_color_12 = s:blue
+    let g:terminal_color_13 = s:purple
+    let g:terminal_color_14 = s:cyan
+    let g:terminal_color_15 = s:gray4
     let g:terminal_color_background = g:terminal_color_0
     let g:terminal_color_foreground = g:terminal_color_7
 endif
