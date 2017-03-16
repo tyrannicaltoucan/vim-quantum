@@ -1,35 +1,25 @@
-" Quantum - A Vim color scheme inspired by Material Design
+" Quantum - A 24-bit Material color scheme for Vim
 " Author: Brandon Siders
 " License: MIT
 
 highlight clear
-syntax reset
+
+if exists('syntax_on')
+    syntax reset
+endif
 
 set background=dark
 let g:colors_name = 'quantum'
 
-if !exists('g:quantum_italics')
-    let g:quantum_italics = 0
-endif
+let g:quantum_italics = get(g:, 'quantum_italics', 0)
+let g:quantum_black = get(g:, 'quantum_black', 0)
 
-if !exists('g:quantum_black')
-    let g:quantum_black = 0
-endif
-
-if g:quantum_black
-    let s:gray1 = '#212121'
-    let s:gray2 = '#292929'
-    let s:gray3 = '#474646'
-    let s:gray4 = '#6a6c6c'
-    let s:gray5 = '#bcbec0'
-else
-    let s:gray1 = '#263238'
-    let s:gray2 = '#2c3a41'
-    let s:gray3 = '#425762'
-    let s:gray4 = '#658494'
-    let s:gray5 = '#aebbc5'
-endif
-
+" Color Palette
+let s:gray1     = g:quantum_black ? '#212121' : '#263238'
+let s:gray2     = g:quantum_black ? '#292929' : '#2c3a41'
+let s:gray3     = g:quantum_black ? '#474646' : '#425762'
+let s:gray4     = g:quantum_black ? '#6a6c6c' : '#658494'
+let s:gray5     = g:quantum_black ? '#b7bdc0' : '#aebbc5'
 let s:red       = '#dd7186'
 let s:green     = '#87bb7c'
 let s:yellow    = '#d5b875'
@@ -41,19 +31,17 @@ let s:indigo    = '#7681de'
 
 function! s:HL(group, fg, bg, attr)
     let l:attr = a:attr
-    if g:quantum_italics == 0 && l:attr ==? 'italic'
+    if !g:quantum_italics && l:attr ==# 'italic'
         let l:attr = 'none'
     endif
 
     if !empty(a:fg)
         exec 'hi ' . a:group . ' guifg=' . a:fg
     endif
-
     if !empty(a:bg)
         exec 'hi ' . a:group . ' guibg=' . a:bg
     endif
-
-    if l:attr != ''
+    if !empty(a:attr)
         exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
     endif
 endfun
