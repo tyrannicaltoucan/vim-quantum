@@ -1,5 +1,5 @@
 # Quantum
-A Vim color scheme based on the [Material Design palette](https://material.google.com/style/color.html#color-color-palette).
+A 24-bit Vim color scheme based on Google's [Material Design palette](https://material.io/guidelines/style/color.html#).
 
 ##### Quantum
 ![quantum](http://i.imgur.com/NDZRnpa.png)
@@ -8,42 +8,30 @@ A Vim color scheme based on the [Material Design palette](https://material.googl
 ![quantum-black](http://i.imgur.com/1hNWyMB.png)
 
 ### Installation
-Use a plugin manager, or download this repo to `~/.vim/colors`.
+**NOTE:** This color scheme requires a terminal that supports true colors!
 
-Then add the following to your `.vimrc` or `init.vim`:
+Install this color scheme using your preferred Vim plugin manager, then add the
+following to your (n)vim configuration file:
 ```vim
 set background=dark
+set termguicolors
 colorscheme quantum
 ```
 
-If your terminal supports true colors, add:
-###### For Vim 8.0+ and Neovim 0.1.5+
-```vim
-if has("termguicolors")
-    set termguicolors
-endif
-```
-
-###### For Neovim 0.1.3 and 0.1.4
-```vim
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-```
-
 ### Options
+If you prefer a black background:
+```vim
+let g:quantum_black=1
+```
+
+To italicize comments:
+```vim
+let g:quantum_italics=1
+```
+
+### Vim Airline
 To use the included [Airline](https://github.com/vim-airline/vim-airline) theme:
 ```vim
 let g:airline_theme='quantum'
 ```
 
-For more contrast, enable Quantum Black:
-```vim
-let g:quantum_black = 1
-```
-
-If your terminal supports italics, add:
-```vim
-let g:quantum_italics = 1
-```
-
----
-Released under the [MIT](https://raw.githubusercontent.com/tyrannicaltoucan/dotfiles/master/LICENSE) license.
