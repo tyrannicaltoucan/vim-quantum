@@ -2,7 +2,7 @@ let g:airline#themes#quantum#palette = {}
 
 function! airline#themes#quantum#refresh()
     let g:airline#themes#quantum#palette.accents = {
-                \ 'red': airline#themes#get_highlight('Error'),
+                \ 'red': airline#themes#get_highlight('Identifier'),
                 \ }
 
     let s:N1 = airline#themes#get_highlight2(['CursorLine', 'bg'], ['Directory', 'fg'], 'bold')
@@ -34,8 +34,8 @@ function! airline#themes#quantum#refresh()
     if get(g:, 'loaded_ctrlp', 0)
         let g:airline#themes#quantum#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
                 \ airline#themes#get_highlight('CursorLine'),
-                \ airline#themes#get_highlight2(['Constant', 'fg'], ['Normal', 'bg']),
-                \ airline#themes#get_highlight2(['Normal', 'bg'], ['Constant', 'fg'], 'bold'))
+                \ airline#themes#get_highlight2(['Operator', 'fg'], ['Normal', 'bg']),
+                \ airline#themes#get_highlight2(['Normal', 'bg'], ['Operator', 'fg'], 'bold'))
     endif
 endfun
 
