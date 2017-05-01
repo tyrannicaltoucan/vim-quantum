@@ -19,7 +19,7 @@ colorscheme quantum
 ```
 
 ### Options
-If you prefer a black background:
+If you prefer a black background, add this option *before* `colorscheme=quantum`:
 ```vim
 let g:quantum_black=1
 ```
