@@ -1,17 +1,20 @@
 # Quantum
-A 24-bit Vim color scheme based on Google's [Material Design palette](https://material.io/guidelines/style/color.html#).
+
+A color scheme based on Google's [Material Design palette](https://material.io/guidelines/style/color.html#color-color-palette).
+
+> **NOTE:** Quantum requires a terminal or GUI that supports true-colors!
 
 ##### Quantum
-![quantum](http://i.imgur.com/NDZRnpa.png)
+![quantum](https://i.imgur.com/gdWhDrA.png)
 
 ##### Quantum Black
-![quantum-black](http://i.imgur.com/1hNWyMB.png)
+![quantum-black](https://i.imgur.com/VzPs0Uf.png)
 
 ### Installation
-**NOTE:** This color scheme requires a terminal that supports true colors!
 
 Install this color scheme using your preferred Vim plugin manager, then add the
-following to your (n)vim configuration file:
+following to your vim configuration file:
+
 ```vim
 set background=dark
 set termguicolors
@@ -19,19 +22,36 @@ colorscheme quantum
 ```
 
 ### Options
-If you prefer a black background, add this option *before* `colorscheme=quantum`:
+
+> **NOTE:** Configure all options *before* setting `colorscheme`!
+
+To swap the default background colors with blacker ones:
 ```vim
 let g:quantum_black=1
+colorscheme quantum
 ```
 
-To italicize comments:
+To italicize the comments:
 ```vim
 let g:quantum_italics=1
 ```
 
-### Vim Airline
-To use the included [Airline](https://github.com/vim-airline/vim-airline) theme:
+### Status Bar Support
+
+Quantum has themes for both [vim-airline](https://github.com/vim-airline/vim-airline) as well
+as [lightline](https://github.com/itchyny/lightline.vim).
+
+Install the statusbar plugin of your choice then set the theme in your
+vim config:
+
+Airline:
 ```vim
 let g:airline_theme='quantum'
 ```
 
+Lightline:
+```vim
+let g:lightline = {
+      \ 'colorscheme': 'quantum',
+      \ }
+```
