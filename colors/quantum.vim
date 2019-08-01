@@ -11,8 +11,13 @@ endif
 set background=dark
 let g:colors_name = 'quantum'
 
-let g:quantum_italics = get(g:, 'quantum_italics', 0)
-let g:quantum_style = get(g:, 'quantum_style', 'default')
+let s:use_italics = get(g:, 'quantum_italics')
+let s:palette_type = get(g:, 'quantum_style', 'default')
+
+" Add compat for old setting
+if (get(g:, 'quantum_black'))
+    let s:palette_type = 'black'
+endif
 
 " Color Palette
 let s:colors = {}
@@ -35,7 +40,7 @@ let s:colors.indigo = {'default': '#7681de', 'black': '#7681de'}
 function! s:create_colors(color_dict)
     for color_name in keys(a:color_dict)
         let l:var_name = "s:" . color_name
-        let l:color_value = s:colors[color_name][g:quantum_style]
+        let l:color_value = s:colors[color_name][s:palette_type]
         exe "let " . l:var_name. " = ' " . l:color_value . "'"
     endfor
 endfun
@@ -43,19 +48,21 @@ endfun
 call s:create_colors(s:colors)
 
 function! s:HL(group, fg, bg, attr)
+    if !empty(a:fg)
+        exe 'hi! ' . a:group . ' guifg=' . a:fg
+    endif
+
+    if !empty(a:bg)
+        exe 'hi! ' . a:group . ' guibg=' . a:bg
+    endif
+
     let l:attr = a:attr
-    if !g:quantum_italics && l:attr ==# 'italic'
+    if !s:use_italics && l:attr ==# 'italic'
         let l:attr = 'none'
     endif
 
-    if !empty(a:fg)
-        exec 'hi ' . a:group . ' guifg=' . a:fg
-    endif
-    if !empty(a:bg)
-        exec 'hi ' . a:group . ' guibg=' . a:bg
-    endif
     if !empty(a:attr)
-        exec 'hi ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
+        exe 'hi! ' . a:group . ' gui=' . l:attr . ' cterm=' . l:attr
     endif
 endfun
 
