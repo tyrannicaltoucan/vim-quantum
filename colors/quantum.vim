@@ -12,22 +12,35 @@ set background=dark
 let g:colors_name = 'quantum'
 
 let g:quantum_italics = get(g:, 'quantum_italics', 0)
-let g:quantum_black = get(g:, 'quantum_black', 0)
+let g:quantum_style = get(g:, 'quantum_style', 'default')
 
 " Color Palette
-let s:gray1     = g:quantum_black ? '#212121' : '#263238'
-let s:gray2     = g:quantum_black ? '#292929' : '#2c3a41'
-let s:gray3     = g:quantum_black ? '#474646' : '#425762'
-let s:gray4     = g:quantum_black ? '#6a6c6c' : '#658494'
-let s:gray5     = g:quantum_black ? '#b7bdc0' : '#aebbc5'
-let s:red       = '#dd7186'
-let s:green     = '#87bb7c'
-let s:yellow    = '#d5b875'
-let s:blue      = '#70ace5'
-let s:purple    = '#a48add'
-let s:cyan      = '#69c5ce'
-let s:orange    = '#d7956e'
-let s:indigo    = '#7681de'
+let s:colors = {}
+
+let s:colors.gray1  = {'default': '#263238', 'black': '#212121'}
+let s:colors.gray2  = {'default': '#2c3a41', 'black': '#292929'}
+let s:colors.gray3  = {'default': '#425762', 'black': '#474646'}
+let s:colors.gray4  = {'default': '#658494', 'black': '#6a6c6c'}
+let s:colors.gray5  = {'default': '#b7bdc0', 'black': '#aebbc5'}
+
+let s:colors.red    = {'default': '#dd7186', 'black': '#dd7186'}
+let s:colors.green  = {'default': '#87bb7c', 'black': '#87bb7c'}
+let s:colors.yellow = {'default': '#d5b875', 'black': '#d5b875'}
+let s:colors.blue   = {'default': '#70ace5', 'black': '#70ace5'}
+let s:colors.purple = {'default': '#a48add', 'black': '#a48add'}
+let s:colors.cyan   = {'default': '#69c5ce', 'black': '#69c5ce'}
+let s:colors.orange = {'default': '#d7956e', 'black': '#d7956e'}
+let s:colors.indigo = {'default': '#7681de', 'black': '#7681de'}
+
+function! s:create_colors(color_dict)
+    for color_name in keys(a:color_dict)
+        let l:var_name = "s:" . color_name
+        let l:color_value = s:colors[color_name][g:quantum_style]
+        exe "let " . l:var_name. " = ' " . l:color_value . "'"
+    endfor
+endfun
+
+call s:create_colors(s:colors)
 
 function! s:HL(group, fg, bg, attr)
     let l:attr = a:attr
