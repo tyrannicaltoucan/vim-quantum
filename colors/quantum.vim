@@ -22,20 +22,20 @@ endif
 " Color Palette
 let s:colors = {}
 
-let s:colors.gray1  = {'default': '#263238', 'black': '#212121'}
-let s:colors.gray2  = {'default': '#2c3a41', 'black': '#292929'}
-let s:colors.gray3  = {'default': '#425762', 'black': '#474646'}
-let s:colors.gray4  = {'default': '#658494', 'black': '#6a6c6c'}
-let s:colors.gray5  = {'default': '#b7bdc0', 'black': '#aebbc5'}
+let s:colors.gray1  = {'default': '#263238', 'black': '#202124'}
+let s:colors.gray2  = {'default': '#2d3c43', 'black': '#292b2e'}
+let s:colors.gray3  = {'default': '#43555e', 'black': '#4a4c52'}
+let s:colors.gray4  = {'default': '#637d8a', 'black': '#696c75'}
+let s:colors.gray5  = {'default': '#b1bbc5', 'black': '#babbc1'}
 
-let s:colors.red    = {'default': '#dd7186', 'black': '#dd7186'}
-let s:colors.green  = {'default': '#87bb7c', 'black': '#87bb7c'}
-let s:colors.yellow = {'default': '#d5b875', 'black': '#d5b875'}
-let s:colors.blue   = {'default': '#70ace5', 'black': '#70ace5'}
-let s:colors.purple = {'default': '#a48add', 'black': '#a48add'}
-let s:colors.cyan   = {'default': '#69c5ce', 'black': '#69c5ce'}
-let s:colors.orange = {'default': '#d7956e', 'black': '#d7956e'}
-let s:colors.indigo = {'default': '#7681de', 'black': '#7681de'}
+let s:colors.red    = {'default': '#dc7b8b', 'black': '#d5687b'}
+let s:colors.green  = {'default': '#92c27c', 'black': '#84ba6b'}
+let s:colors.yellow = {'default': '#d7be77', 'black': '#d2b768'}
+let s:colors.blue   = {'default': '#89b7ea', 'black': '#78ade7'}
+let s:colors.purple = {'default': '#ac95de', 'black': '#a985d3'}
+let s:colors.cyan   = {'default': '#7fd0d8', 'black': '#77c5cd'}
+let s:colors.orange = {'default': '#e09c78', 'black': '#dd9168'}
+let s:colors.indigo = {'default': '#909af1', 'black': '#7c80dd'}
 
 function! s:create_colors(color_dict)
     for color_name in keys(a:color_dict)
