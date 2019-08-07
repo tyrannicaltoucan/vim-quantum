@@ -260,22 +260,22 @@ call s:HL('xmlTagName',                     s:blue,     '',         '')
 
 " Neovim terminal colors
 if has('nvim')
-    let g:terminal_color_0 = s:gray1
-    let g:terminal_color_1 = s:red
-    let g:terminal_color_2 = s:green
-    let g:terminal_color_3 = s:yellow
-    let g:terminal_color_4 = s:blue
-    let g:terminal_color_5 = s:purple
-    let g:terminal_color_6 = s:cyan
-    let g:terminal_color_7 = s:gray5
-    let g:terminal_color_8 = s:gray3
-    let g:terminal_color_9 = s:red
-    let g:terminal_color_10 = s:green
-    let g:terminal_color_11 = s:yellow
-    let g:terminal_color_12 = s:blue
-    let g:terminal_color_13 = s:purple
-    let g:terminal_color_14 = s:cyan
-    let g:terminal_color_15 = s:gray4
+    let g:terminal_color_0 = s:colors.gray1[s:palette_type]
+    let g:terminal_color_1 = s:colors.red[s:palette_type]
+    let g:terminal_color_2 = s:colors.green[s:palette_type]
+    let g:terminal_color_3 = s:colors.yellow[s:palette_type]
+    let g:terminal_color_4 = s:colors.blue[s:palette_type]
+    let g:terminal_color_5 = s:colors.purple[s:palette_type]
+    let g:terminal_color_6 = s:colors.cyan[s:palette_type]
+    let g:terminal_color_7 = s:colors.gray5[s:palette_type]
+    let g:terminal_color_8 = s:colors.gray3[s:palette_type]
+    let g:terminal_color_9 = s:colors.red[s:palette_type]
+    let g:terminal_color_10 = s:colors.green[s:palette_type]
+    let g:terminal_color_11 = s:colors.yellow[s:palette_type]
+    let g:terminal_color_12 = s:colors.blue[s:palette_type]
+    let g:terminal_color_13 = s:colors.purple[s:palette_type]
+    let g:terminal_color_14 = s:colors.cyan[s:palette_type]
+    let g:terminal_color_15 = s:colors.gray4[s:palette_type]
     let g:terminal_color_background = g:terminal_color_0
     let g:terminal_color_foreground = g:terminal_color_7
 endif
