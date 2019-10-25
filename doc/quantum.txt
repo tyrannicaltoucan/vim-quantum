@@ -1,0 +1,62 @@
+*quantum.txt*				Last change: 2019 Oct 25
+
+
+	      vim-quantum - Colorscheme by Brandon Siders~
+
+
+					    *vim-quantum* *quantum*
+Quantum is a color scheme based on Google's Material Design palette.
+https://material.io/guidelines/style/color.html#color-color-palette
+
+Note: Quantum requires a terminal or GUI that supports true-colors!
+
+For screenshots, updates and more details please visit:
+https://github.com/tyrannicaltoucan/vim-quantum
+
+1. Installation				|quantum-install|
+2. Options			    	|quantum-options|
+3. Airline and lightline Themes		|quantum-statusline|
+
+==============================================================================
+1. Install						*quantum-install*
+
+Install this color scheme using |packages| or your preferred Vim plugin
+manager, then add the following to your vim configuration file: >
+
+	set background=dark
+	set termguicolors
+	colorscheme quantum
+<
+==============================================================================
+2. Options						*quantum-options*
+
+Note: Configure all options before setting `:colorscheme`.
+
+ *g:quantum_black*		{boolean} Default: 0
+				Swap the default background colors with
+				blacker ones. >
+				    let g:quantum_black = 1
+<
+ *g:quantum_italics*		{boolean} Default: 0
+				Italicize the comments. >
+				    let g:quantum_italics = 1
+<
+==============================================================================
+3. Airline and lightline Themes				*quantum-statusline*
+					*quantum-airline* *quantum-lightline*
+
+Quantum has themes for both |Airline| as well as |lightline|. Install the
+statusbar of your choice then set the theme in your vim config.
+
+Airline: >
+	let g:airline_theme = 'quantum'
+<
+lightline: >
+	let g:lightline = {
+	      \ 'colorscheme': 'quantum',
+	      \ }
+<
+ - Airline:   https://github.com/vim-airline/vim-airline
+ - lightline: https://github.com/itchyny/lightline.vim
+
+ vim:tw=78:ts=8:noet:ft=help:norl:
