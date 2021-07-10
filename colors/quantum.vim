@@ -86,7 +86,7 @@ call s:HL('Title',                          s:green,    '',         'none')
 call s:HL('VertSplit',                      s:gray4,    s:gray1,    'none')
 call s:HL('Visual',                         s:gray5,    s:gray3,    '')
 call s:HL('WarningMsg',                     s:red,      '',         '')
-call s:HL('WildMenu',                       s:gray2,    s:cyan,	    '')
+call s:HL('WildMenu',                       s:gray2,    s:cyan,     '')
 
 " Standard Syntax
 call s:HL('Comment',                        s:gray4,    '',         'italic')
@@ -237,6 +237,60 @@ call s:HL('xmlAttrib',                      s:yellow,   '',         '')
 call s:HL('xmlEndTag',                      s:blue,     '',         '')
 call s:HL('xmlTag',                         s:blue,     '',         '')
 call s:HL('xmlTagName',                     s:blue,     '',         '')
+
+" Tree-sitter
+call s:HL('TSAnnotation',                   s:cyan,     '',         '')
+call s:HL('TSAttribute',                    s:yellow,   '',         '')
+call s:HL('TSBoolean',                      s:orange,   '',         '')
+hi link TSCharacter Character
+call s:HL('TSConditional',                  s:purple,   '',         '')
+hi link TSConstant Constant
+call s:HL('TSConstBuiltin',                 s:indigo,   '',         '')
+call s:HL('TSConstMacro',                   s:indigo,   '',         '')
+call s:HL('TSConstructor',                  s:indigo,   '',         '')
+call s:HL('TSEmphasis',                     '',         '',         'italic')
+hi link TSError Error
+call s:HL('TSException',                    s:purple,   '',         '')
+call s:HL('TSField',                        s:orange,   '',         '')
+call s:HL('TSFloat',                        s:orange,   '',         '')
+hi link TSFunction Function
+call s:HL('TSFuncBuiltin',                  s:blue,     '',         '')
+call s:HL('TSFuncMacro',                    s:blue,     '',         '')
+hi link TSInclude Include
+call s:HL('TSKeyword',                      s:indigo,   '',         '')
+call s:HL('TSKeywordFunction',              s:indigo,   '',         '')
+call s:HL('TSKeywordOperator',              s:indigo,   '',         '')
+call s:HL('TSLabel',                        s:orange,   '',         '')
+call s:HL('TSLiteral',                      s:orange,   '',         '')
+call s:HL('TSMethod',                       s:blue,     '',         '')
+call s:HL('TSNamespace',                    s:orange,   '',         '')
+call s:HL('TSNumber',                       s:orange,   '',         '')
+hi link TSOperator Operator
+call s:HL('TSParameter',                    s:red,      '',         '')
+call s:HL('TSParameterReference',           s:yellow,   '',         '')
+call s:HL('TSProperty',                     s:red,      '',         '')
+call s:HL('TSPunctBracker',                 s:blue,     '',         '')
+call s:HL('TSPunctDelimiter',               s:blue,     '',         '')
+call s:HL('TSPunctSpecial',                 s:blue,     '',         '')
+call s:HL('TSRepeat',                       s:purple,   '',         '')
+call s:HL('TSStrike',                       '',         '',         '')
+hi link TSString String
+call s:HL('TSStringRegex',                  s:yellow,   '',         '')
+call s:HL('TSStringEscape',                 s:purple,   '',         '')
+call s:HL('TSStrong',                       '',         '',         'bold')
+call s:HL('TSStructure',                    s:red,      '',         '')
+call s:HL('TSSymbol',                       s:orange,   '',         '')
+call s:HL('TSTag',                          s:blue,     '',         '')
+call s:HL('TSTagDelimiter',                 s:blue,     '',         '')
+call s:HL('TSText',                         s:gray5,    '',         '')
+call s:HL('TSTextReference',                s:yellow,   '',         '')
+call s:HL('TSTitle',                        s:green,    '',         'bold')
+hi link TSType Type
+hi link TSTypeBuiltin Type
+call s:HL('TSUnderline',                    '',         '',         'underline')
+call s:HL('TSURI',                          s:gray5,    '',         '')
+call s:HL('TSVariable',                     s:gray5,    '',         '')
+call s:HL('TSVariableBuiltin',              s:blue,     '',         '')
 
 " Neovim terminal colors
 if has('nvim')
